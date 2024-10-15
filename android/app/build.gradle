@@ -1,0 +1,37 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // Asegúrate de que esté al final
+}
+
+android {
+    namespace = "com.example.chatbot" // Namespace de tu aplicación
+    compileSdk = 34 // Usa la versión más reciente del SDK
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.chatbot" // Application ID único
+        minSdkVersion = 21 // La versión mínima de SDK que soporta tu app
+        targetSdkVersion = 33 // La versión del SDK que estés usando
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug // Configuración para firma de la app
+        }
+    }
+}
+
+flutter {
+    source = "../.." // Ruta a la fuente de tu proyecto Flutter
+}
