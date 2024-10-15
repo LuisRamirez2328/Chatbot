@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/chatbot.dart'; // Asegúrate de que la ruta sea correcta
+import 'screens/welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ChatBotView(), // Cambia aquí a ChatBotView
+      home: const HomeScreen(), // Cambia aquí a HomeScreen
     );
   }
 }
